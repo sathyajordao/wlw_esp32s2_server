@@ -57,9 +57,11 @@ The development board is accessed with ArduinoIDE. Please make sure that the nec
 SPIFFS (Serial Peripheral Interface Flash File System) is a file system designed for SPI NOR flash memory on embedded systems. It allows storing and retrieving files on non-volatile storage like the flash memory of an ESP32. SPIFFS is used to store and serve the HTML file ("index.html") that represents the web page served by the ESP32.
 
 
+
+
 ## Project Overview 
 
-#### project schematic:
+### project schematic:
 ```
 +-----------------------+            +--------------------------+
 |      ESP32 Server     |            |       Web Browser        |
