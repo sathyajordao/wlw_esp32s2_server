@@ -44,6 +44,8 @@ PC + USB Serial adapter connected to USB port + Espressif ESP32-S2 development b
 
 The ESP32S2DEVKITM development board ESP32-S2-MINI-1 is used for this example below but other similar chips/boards can be used as well.
 
+The typical usage of the SHT4x is shown below.
+
 ![image](https://github.com/sathyajordao/wlw_esp32s2_server/assets/103050063/62e72636-e153-4eb0-a70c-edd9c11356f4)
 
 
