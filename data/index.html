@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Sensor Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #sensor-data {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        #chart-container {
+            margin-top: 20px;
+            width: 80%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="sensor-data">
+        <h2>Sensor Data</h2>
+        <p><strong>Sensor:</strong> <span id="sensor-name">--</span></p>
+        <p><strong>Temperature:</strong> <span id="temperature">--</span> &deg;C</p>
+        <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+    </div>
+
+    <div id="chart-container">
+        <canvas id="temperature-chart"></canvas>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('temperature-chart').getContext('2d');
+        var temperatureChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Temperature (°C)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    data: [],
+                    fill: true,
+                }]
+            },
+            options: {
+                scales: {
+                    x: [{
+                        type: 'linear',
+                        position: 'bottom',
+                    }]
+                }
+            }
+        });
+
+        function fetchSensorData() {
+            // Fetch sensor data from the server
+            fetch('/data')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('sensor-name').textContent = data.sensor;
+                    document.getElementById('temperature').textContent = data.temperature;
+                    document.getElementById('humidity').textContent = data.humidity;
+
+                    // Add new data points to the chart
+                    temperatureChart.data.labels.push(new Date().toLocaleTimeString());
+                    temperatureChart.data.datasets[0].data.push(data.temperature);
+
+                    // Update the chart
+                    temperatureChart.update();
+                })
+                .catch(error => console.error('Error fetching sensor data:', error));
+        }
+
+        // Fetch initial sensor data
+        fetchSensorData();
+
+        // Periodically fetch sensor data every 5 seconds
+        setInterval(fetchSensorData, 5000);
+    </script>
+</body>
+</html>
