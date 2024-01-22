@@ -127,3 +127,10 @@ SPIFFS (Serial Peripheral Interface Flash File System) is a file system designed
 #### 9. Configure Port Forwarding (Optional):
 - Access your router settings and set up port forwarding for the port (default is 80) used by the ESP32 server.
 - This allows the web interface to be accessible from anywhere on the internet using your public IP address or domain name.
+
+
+## Example Output (Pictures)
+
+### Hardware Setup
+
+![IMG_5172](https://github.com/sathyajordao/wlw_esp32s2_server/assets/103050063/e18fe20d-c31e-462f-9a17-97bab2a30049)
