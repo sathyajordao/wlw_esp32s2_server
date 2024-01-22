@@ -73,7 +73,3 @@ The development board is accessed with ArduinoIDE. Please make sure that the nec
 +-----------------------+            +--------------------------+
 
 ```
-
-#### Connect an external RS485 serial interface to an ESP32 board
-Connect a USB-to-RS485 adapter to a computer, then connect the adapter's A/B output lines with the corresponding A/B output lines of the RS485 line driver connected to the ESP32 chip (see figure above).
-```
