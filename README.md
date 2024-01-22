@@ -124,4 +124,6 @@ SPIFFS (Serial Peripheral Interface Flash File System) is a file system designed
 #### 8. Customization (Optional):
 - Modify the code, HTML, or CSS files to customize the appearance or behavior of the temperature/humidity station.
 
-
+#### 9. Configure Port Forwarding (Optional):
+- Access your router settings and set up port forwarding for the port (default is 80) used by the ESP32 server.
+- This allows the web interface to be accessible from anywhere on the internet using your public IP address or domain name.
