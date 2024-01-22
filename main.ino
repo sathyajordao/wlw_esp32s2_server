@@ -1,7 +1,7 @@
 /*
-  ESP32 IoT Weather Station with 7-Segment Display
+  ESP32 IoT Temperature Surveillance with 7-Segment Display
 
-  This Arduino code is designed for an ESP32-based IoT weather station
+  This Arduino code is designed for an ESP32-based IoT station
   that reads temperature and humidity data from an SHT40 sensor using I2C.
   The sensor data is displayed on three 7-segment displays, and the web interface
   provides real-time updates using Chart.js for temperature trends. The server
