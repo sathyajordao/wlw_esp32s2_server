@@ -65,8 +65,8 @@ const int segF_display3 = 11;
 const int segG_display3 = 10;
 
 // WLAN at home
-const char *ssid = "Sunrise_0216353";
-const char *password = "jbxbtnYesc8Zezcf";
+const char *ssid = "Your_Network";
+const char *password = "Your_Password";
 
 float temp_value;
 float humid_value;
