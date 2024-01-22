@@ -1,3 +1,28 @@
+/*
+  ESP32 IoT Weather Station with 7-Segment Display
+
+  This Arduino code is designed for an ESP32-based IoT weather station
+  that reads temperature and humidity data from an SHT40 sensor using I2C.
+  The sensor data is displayed on three 7-segment displays, and the web interface
+  provides real-time updates using Chart.js for temperature trends. The server
+  exposes an API endpoint for fetching sensor data, and the main HTML file and
+  associated resources are served from the ESP32 SPIFFS filesystem.
+
+  Hardware Setup:
+  - ESP32 with WiFi capabilities
+  - SHT40 sensor connected via I2C
+  - Three 7-segment displays for temperature visualization
+
+  Dependencies:
+  - ESPAsyncWebServer for handling HTTP requests
+  - ArduinoJson for creating JSON responses
+  - Chart.js library for dynamic chart rendering
+
+  Created by Sathya De Albuquerque Jordao
+  Date: 15.1.2024
+*/
+
+
 #include <WiFi.h>
 #include <ESPAsyncWebServer.h>
 #include <SPIFFS.h>
