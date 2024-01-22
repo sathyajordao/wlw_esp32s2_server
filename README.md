@@ -57,6 +57,40 @@ The development board is accessed with ArduinoIDE. Please make sure that the nec
 SPIFFS (Serial Peripheral Interface Flash File System) is a file system designed for SPI NOR flash memory on embedded systems. It allows storing and retrieving files on non-volatile storage like the flash memory of an ESP32. SPIFFS is used to store and serve the HTML file ("index.html") that represents the web page served by the ESP32.
 
 
+### Step-by-Step Guide
+1. Hardware Setup:
+- Connect the ESP32 board to your computer.
+- Connect the SHT40 sensor to the ESP32 using the I2C protocol. Ensure the correct wiring for SDA and SCL pins.
+- Connect the 7-segment displays to the GPIO pins specified in the code (e.g., segA_display1, segB_display1, etc.).
+
+2. Software Setup:
+- Install the necessary Arduino libraries:
+   - ESPAsyncWebServer
+   - ArduinoJson
+   - Wire (already included in Arduino IDE for I2C communication)
+   - Chart.js (ensure the CDN link in your HTML file is accessible)
+
+3. WiFi Configuration:
+- Open the main.ino file and update the ssid and password variables with your WiFi credentials.
+
+4. Upload the Code:
+- Connect the ESP32 to your computer via USB.
+- Select the correct ESP32 board and port in the Arduino IDE.
+- Upload the code to the ESP32.
+
+5. SPIFFS Setup:
+- Ensure SPIFFS (SPI Flash File System) is mounted successfully. The code checks for this during setup.
+
+6. Access the Web Interface:
+- Once uploaded, open the Serial Monitor to view the ESP32's IP address.
+- Enter this IP address in a web browser to access the IoT Weather Station interface.
+
+7. View Sensor Data:
+- The web interface displays real-time temperature and humidity from the SHT40 sensor.
+- The temperature trend is visualized using Chart.js.
+
+8. Customization (Optional):
+- Modify the code, HTML, or CSS files to customize the appearance or behavior of the temperature/humidity station.
 
 
 ## Project Overview 
