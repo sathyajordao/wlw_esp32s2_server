@@ -132,6 +132,10 @@ Please note that the folder structure and name has to be as in this example.
 
 ## Example Output (Pictures)
 
-### Hardware Setup
+### Server/Hardware Setup
 
 ![IMG_5172](https://github.com/sathyajordao/wlw_esp32s2_server/assets/103050063/e18fe20d-c31e-462f-9a17-97bab2a30049)
+
+### Client (Webbrowser)
+
+![Web capture_22-1-2024_11451_217 162 210 35](https://github.com/sathyajordao/wlw_esp32s2_server/assets/103050063/3f38dddf-5335-4e21-9935-5e9a45c32705)
