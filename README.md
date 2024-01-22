@@ -69,10 +69,10 @@ SPIFFS (Serial Peripheral Interface Flash File System) is a file system designed
 |   +---------------+   |            |   +------------------+   |
 |   |   main.ino    |   |            |   |                  |   |
 |   |     API       |   |  HTTP GET  |   |                  |   |
-|   +---------------+   +------------>   |                  |   |
-|   |  Rendering    |   |  JSON Data |   |                  |   |
-|   | index.html    |   |            |   |                  |   |
-|   |  chart.js     |   |            |   |                  |   |
+|   +---------------+   +------------>   |   |              |   |
+|   |  Rendering    |   |  JSON Data |   |   |       ___/   |   |
+|   | index.html    |   |            |   |   |   __/        |   |
+|   |  chart.js     |   |            |   |   |_/__________  |   |
 |   +---------------+   |            |   |                  |   |
 |   | Sensor Data   |   |            |   |                  |   |
 |   |   Fetch       |   |            |   |                  |   |
