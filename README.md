@@ -4,7 +4,7 @@
 # WLW HS23 Webserver Project
 This is a small project, using an ESP32-S2 module to read out temperature and humidity values of a SHT40 sensor.
 The ESP32-S2 acts as a webserver and hosts a simple web application containing the measurements.
-The website is from a webbrowser accessible and values are shown as chart.
+The website is from a webbrowser accessible and values are shown as a chart.
 
 ## What the example does
 
