@@ -8,7 +8,7 @@ The website is from a webbrowser accessible and values are shown as a chart.
 
 ## What the example does
 
-### 1.Server (ESP32):
+### 1. Server (ESP32):
 
 The ESP32 acts as a server using the AsyncWebServer library.
 It connects to your local WiFi network using the provided SSID and password.
