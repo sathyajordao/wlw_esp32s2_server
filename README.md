@@ -31,7 +31,7 @@ The website is from a webbrowser accessible and values are shown as a chart.
    |  I2C              |  GPIO
 +---------------+     +---------------------------------+
 |   SHT40       |     |    __   __   __   7-seg-display |
-|               |     |   |__| |__| |__|                |
+|   temp & hum  |     |   |__| |__| |__|                |
 +---------------+     |   |__|.|__|.|__|.               |
                       +---------------------------------+
 
