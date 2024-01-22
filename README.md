@@ -40,9 +40,11 @@ In summary, the ESP32 server collects sensor data, serves a web page to clients,
 ## How to use the example
 
 ### Hardware Required
-PC + USB Serial adapter connected to USB port + Espressif ESP32-S2 development board + SHT40 with required passive components and connected to to specified pins on development board (see below for more information).
+PC + USB Serial adapter connected to USB port + Espressif ESP32-S2 development board + 7-segment display LEDs + SHT40 with required passive components and connected to to specified pins on development board (see below for more information).
 
-The ESP32S2DEVKITM development board ESP32-S2-MINI-1 is used for this example below but other similar chips/boards can be used as well.
+The ESP32S2DEVKITM development board ESP32-S2-MINI-1 is used for this example, but other similar chips/boards can be used as well.
+
+The 7-segment display LEDs are connected to GPIO pins of the development board. For the exact pin configuration see the pin definitions in the .ino file.
 
 The typical usage of the SHT4x is shown below.
 
